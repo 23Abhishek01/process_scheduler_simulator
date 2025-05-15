@@ -1,0 +1,412 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #ffa500; /* Orange color */
+}
+
+.header h2 {
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+select {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.start-btn {
+    margin-top: 20px;
+}
+
+/* Table Styling */
+.process-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.process-table th, .process-table td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.process-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #ffa500;
+    width: 0%;
+    transition: width 0.3s linear;
+}
+
+/* Error Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal h3 {
+    color: #333;
+}
+
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.modal-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    .control-group {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
+#simulation {
+    width: 100%;
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+/* SJF Simulation Styles */
+.sjf-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: white;
+}
+
+.sjf-header {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sjf-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.sjf-table th, .sjf-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.sjf-table th {
+    font-weight: bold;
+}
+
+.sjf-progress-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sjf-process-label {
+    width: 60px;
+    font-weight: bold;
+}
+
+.sjf-progress-container {
+    flex-grow: 1;
+    height: 25px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.sjf-progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.sjf-remaining-time {
+    width: 100px;
+    text-align: center;
+}
+
+.sjf-stats {
+    margin-top: 30px;
+}
+
+.sjf-stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sjf-control-btn {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 25px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sjf-control-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.sjf-control-btn.exit {
+    background-color: #f44336;
+}
+.control-button.exit {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.control-button.exit:hover {
+    background-color: darkred;
+}
+.control-button {
+    font-size: 20px;        /* Make text bigger */
+    padding: 15px 30px;     /* Make button bigger */
+    background-color: #007bff; /* Nice blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;         /* Needed for margin auto */
+    margin: 50px auto;      /* Center horizontally + space from top */
+}
+
+
+/* SJF Timeline Styles */
+.timeline {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.timeline-header {
+    font-weight: bold;
+    margin: 5px 0;
+    color: #ffa500;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.timeline-time {
+    width: 60px;
+    font-weight: bold;
+}
+
+.timeline-process {
+    width: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timeline-bar-container {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #333;
+    border-radius: 3px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.timeline-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+    background-color: #ffa500;
+}
+
+.timeline-remaining {
+    width: 150px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.timeline-idle {
+    color: #ff6b6b;
+    font-style: italic;
+    margin: 5px 0;
+    padding-left: 100px;
+}
+.simulation-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.simulation-header {
+    font-family: 'Courier Prime', monospace;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+ 

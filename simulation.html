@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CPU Scheduling Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Add html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <style>
+        /* Additional styles specific to simulation page */
+        .simulation-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        
+        body {
+            display: block;
+            padding: 20px;
+        }
+
+        /* Add print-specific styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .simulation-container {
+                background: white;
+                color: black;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="simulationContainer"></div>
+    <script src="simulation.js"></script>
+</body>
+</html>
